@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/*변수*/
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
+.header {
+  position: fixed;
+  width: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+.header .topHeader {
+  width: 100%;
+  position: absolute;
+  pointer-events: auto;
+  top: -50px;
+  transition: all 0.3s;
+  z-index: 1;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  align-items: center;
+  background: #003F74;
+}
+.header .topHeader .hamburgerWrap {
+  display: none;
+}
+.header .topHeader .hamburgerWrap .center {
+  width: 1.7em;
+  height: 1.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header .topHeader .hamburgerWrap .center:before,
+.header .topHeader .hamburgerWrap .center:after,
+.header .topHeader .hamburgerWrap .center div {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 3px;
+  transition: 0.5s;
+  pointer-events: none;
+  margin: 11.5% 0;
+}
+.header .topHeader .hamburgerWrap .center.on:before {
+  transform: translateY(400%) rotate(135deg);
+}
+.header .topHeader .hamburgerWrap .center.on:after {
+  transform: translateY(-400%) rotate(-135deg);
+}
+.header .topHeader .hamburgerWrap .center.on div {
+  transform: scale(0);
+}
+.header .subHeader {
+  height: 100vh;
+  pointer-events: auto;
+  position: relative;
+  overflow: hidden;
+  top: 0px;
+  transition: all 0.3s;
+  width: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  padding: 1.5em;
+  text-align: left;
+  background-color: #0058A3;
+}
+.header .subHeader ul li {
+  padding-bottom: 2.3em;
+  font-weight: 600;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+.header .subHeader ul li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .subHeader ul li a img {
+  margin-right: 0.7em;
+}
+.header .subHeader ul li a span {
+  opacity: 0;
+  color: #fff;
+  transition: opacity 0.3s;
+  position: relative;
+}
+.header .subHeader.on {
+  width: 220px;
+}
+.header .subHeader.on ul li a span {
+  opacity: 1;
+  color: #fff;
+  transition: color 0.3s;
+}
+.header .subHeader.on ul li a:hover span {
+  color: #ffd54f;
+}
+.header .subHeader:focus {
+  width: 220px;
+}
+@media (max-width: 767px) {
+  .topHeader .hamburgerWrap {
+    display: block;
+  }
+
+  .subHeader {
+    width: 100%;
+    height: auto;
+    max-height: 0;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .subHeader ul {
+    padding: 1.5em;
+  }
+  .subHeader ul li {
+    padding-bottom: 1.8em;
+  }
+  .subHeader ul li:last-child {
+    padding-bottom: 1em;
+  }
+  .subHeader ul li a span {
+    opacity: 1;
+  }
+  .subHeader.on {
+    width: 100%;
+    max-height: 350px;
+  }
+  .subHeader.on ul li a span {
+    opacity: 1;
+  }
+}
+.header.on .topHeader {
+  top: 0px;
+}
+.header.on .subHeader {
+  top: 50px;
+}/*# sourceMappingURL=header.css.map */
