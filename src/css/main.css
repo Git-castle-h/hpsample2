@@ -239,7 +239,16 @@
 }
 .Main .VideoSlide .slideWrap .slideArea {
   display: flex;
-  justify-content: center;
+  transition: all 0s;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
+}
+.Main .VideoSlide .slideWrap .slideArea .swiper-slide {
+  height: auto;
+  flex-shrink: 0;
+}
+.Main .VideoSlide .slideWrap .slideArea .swiper-slide img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

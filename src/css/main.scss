@@ -260,9 +260,20 @@
             position: relative;
                 .slideArea{
                     display: flex;
-                    justify-content: center;
+                    transition: all 0s;
+                    justify-content: flex-start;
                     align-items: center;
                     position: relative;
+                    .swiper-slide{
+                        // width:250px !important;
+                        // max-width:300px;
+                        height:auto;
+                        flex-shrink: 0;
+                        img{
+                            width:100%;
+                            height:auto;
+                        }
+                    }
                 }
 
 
