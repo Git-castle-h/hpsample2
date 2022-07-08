@@ -219,6 +219,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1em;
 }
 .Main .VideoSlide .subtab .subBtn {
   padding: 0.4em 1.2em;
@@ -231,7 +232,14 @@
   background-color: rgb(255, 217, 0);
   color: #fff;
 }
-.Main .VideoSlide .slideWrap .slideArea .slide {
-  width: 250px;
-  height: auto;
+.Main .VideoSlide .slideWrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.Main .VideoSlide .slideWrap .slideArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }/*# sourceMappingURL=main.css.map */

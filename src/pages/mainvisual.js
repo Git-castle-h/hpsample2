@@ -16,8 +16,8 @@ function Mainvisual(){
                     <button className="about_CamCo" onClick={aboutCamco_click}>
                             <div className="CamCoImg"></div>
                             <span className="CamCoTxt one">캠퍼스코치잡이란?</span>
-                            <span className="CamCoTxt two">자세히 알아보려면 <span class="click_flicker">Click</span></span>
-                            <video className="CamCo_video" controls loop autoplay muted>
+                            <span className="CamCoTxt two">자세히 알아보려면 <span className="click_flicker">Click</span></span>
+                            <video className="CamCo_video" controls loop autoPlay muted>
                                 <source src="" type="video/mp4"/>
                                 IE 버전을 업데이트 하시길 바랍니다.
                             </video>

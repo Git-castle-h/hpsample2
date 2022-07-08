@@ -241,6 +241,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 1em;
             .subBtn{
                 padding:0.4em 1.2em;
                 margin-right:0.7em;
@@ -254,12 +255,18 @@
             }
         }
         .slideWrap{
-            .slideArea{
-                .slide{
-                    width:250px;
-                    height:auto;
+            width:100%;
+            overflow: hidden;
+            position: relative;
+                .slideArea{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
                 }
-            }
+
+
+        
         }
     }
     
