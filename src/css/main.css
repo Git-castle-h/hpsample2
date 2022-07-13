@@ -4,22 +4,22 @@
   border-radius: 2em;
 }
 
-.Main, .Sub {
+.Main {
   float: right;
   width: calc(100vw - 80px);
   padding-top: 50px;
   text-align: left;
 }
-.Main section, .Sub section {
+.Main section {
   margin-bottom: 4em;
   padding: 0 1.5em;
 }
-.Main .title, .Sub .title {
+.Main .title {
   display: inline-block;
   font-weight: 600;
   font-size: 1.7em;
 }
-.Main .mainVisual, .Sub .mainVisual {
+.Main .mainVisual {
   width: 100%;
   height: 370px;
   display: flex;
@@ -31,36 +31,36 @@
   background-size: cover;
   background-position: 50% 50%;
 }
-.Main .mainVisual .univBox, .Sub .mainVisual .univBox {
+.Main .mainVisual .univBox {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.Main .mainVisual .univBox .logo, .Sub .mainVisual .univBox .logo {
+.Main .mainVisual .univBox .logo {
   width: 100px;
   height: 140px;
 }
-.Main .mainVisual .univBox .title, .Sub .mainVisual .univBox .title {
+.Main .mainVisual .univBox .title {
   color: #fff;
   font-weight: 500;
   font-size: 1.2em;
   padding: 0.5em;
 }
-.Main .mainVisual .univBox .univ_btn, .Sub .mainVisual .univBox .univ_btn {
+.Main .mainVisual .univBox .univ_btn {
   color: #fff;
   font-size: 1em;
   border: 1px solid #fff;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.Main .mainVisual .aboutCamcoWrap, .Sub .mainVisual .aboutCamcoWrap {
+.Main .mainVisual .aboutCamcoWrap {
   display: flex;
   width: 100%;
   padding: 1.5em 0em 0em;
   justify-content: flex-start;
   align-items: center;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo, .Sub .mainVisual .aboutCamcoWrap .about_CamCo {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo {
   position: relative;
   box-sizing: content-box;
   left: 0%;
@@ -72,13 +72,13 @@
   pointer-events: auto;
   box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.2);
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover, .Sub .mainVisual .aboutCamcoWrap .about_CamCo:hover {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover {
   background-color: #00a0e9;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo.on, .Sub .mainVisual .aboutCamcoWrap .about_CamCo.on {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo.on {
   background-color: #00a0e9;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoImg, .Sub .mainVisual .aboutCamcoWrap .about_CamCo .CamCoImg {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoImg {
   width: 1.7em;
   height: 1.7em;
   background-image: url(../../public/images/common/coachjob_logo.png);
@@ -87,7 +87,7 @@
   background-repeat: no-repeat;
   z-index: 20;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoTxt, .Sub .mainVisual .aboutCamcoWrap .about_CamCo .CamCoTxt {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoTxt {
   position: absolute;
   text-align: left;
   color: #fff;
@@ -104,18 +104,18 @@
   font-family: "Noto Sans KR Regular", "NanumGothic", "나눔고딕", sans-serif;
   opacity: 1;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoTxt.two, .Sub .mainVisual .aboutCamcoWrap .about_CamCo .CamCoTxt.two {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoTxt.two {
   word-break: break-all;
   transition: all 0.5s;
   opacity: 0;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.one, .Sub .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.one {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.one {
   opacity: 0;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two, .Sub .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two {
   opacity: 1;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .click_flicker, .Sub .mainVisual .aboutCamcoWrap .about_CamCo .click_flicker {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo .click_flicker {
   color: #ffd54f;
   font-weight: 600;
   /* animation: ClickFlicker 1s alternate infinite; */
@@ -136,7 +136,7 @@
     color: #fff;
   }
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCo_video, .Sub .mainVisual .aboutCamcoWrap .about_CamCo .CamCo_video {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCo_video {
   position: absolute;
   bottom: 20px;
   left: calc(100% + 10px);
@@ -144,16 +144,16 @@
   height: auto;
   transition: all 0.3s;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo.on .CamCo_video, .Sub .mainVisual .aboutCamcoWrap .about_CamCo.on .CamCo_video {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo.on .CamCo_video {
   background-color: #000;
   transition: all 0.3s;
   width: 500px;
   height: auto;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two, .Sub .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two {
   opacity: 1;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .click_flicker, .Sub .mainVisual .aboutCamcoWrap .about_CamCo .click_flicker {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo .click_flicker {
   color: #ffd54f;
   font-weight: 600;
   /* animation: ClickFlicker 1s alternate infinite; */
@@ -166,7 +166,7 @@
     color: #fff;
   }
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCo_video, .Sub .mainVisual .aboutCamcoWrap .about_CamCo .CamCo_video {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCo_video {
   position: absolute;
   bottom: 20px;
   left: calc(100% + 10px);
@@ -174,25 +174,25 @@
   height: auto;
   transition: all 0.3s;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo.on .CamCo_video, .Sub .mainVisual .aboutCamcoWrap .about_CamCo.on .CamCo_video {
+.Main .mainVisual .aboutCamcoWrap .about_CamCo.on .CamCo_video {
   background-color: #000;
   transition: all 0.3s;
   width: 500px;
   height: auto;
 }
-.Main .VideoSlide .maintab, .Sub .VideoSlide .maintab {
+.Main .VideoSlide .maintab {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 1em;
 }
-.Main .VideoSlide .maintab .select, .Sub .VideoSlide .maintab .select {
+.Main .VideoSlide .maintab .select {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: 1em;
 }
-.Main .VideoSlide .maintab .select .onePoint, .Sub .VideoSlide .maintab .select .onePoint {
+.Main .VideoSlide .maintab .select .onePoint {
   height: 2.3em;
   width: 6.5em;
   margin-right: 0.5em;
@@ -201,10 +201,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.Main .VideoSlide .maintab .select .onePoint.on, .Sub .VideoSlide .maintab .select .onePoint.on {
+.Main .VideoSlide .maintab .select .onePoint.on {
   background-image: url(../../public/images/common/onepoint_on.svg);
 }
-.Main .VideoSlide .maintab .select .chippo, .Sub .VideoSlide .maintab .select .chippo {
+.Main .VideoSlide .maintab .select .chippo {
   height: 2.3em;
   width: 6.5em;
   background-image: url(../../public/images/common/chippo_off.svg);
@@ -212,94 +212,94 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.Main .VideoSlide .maintab .select .chippo.on, .Sub .VideoSlide .maintab .select .chippo.on {
+.Main .VideoSlide .maintab .select .chippo.on {
   background-image: url(../../public/images/common/chippo_on.svg);
 }
-.Main .VideoSlide .subtab, .Sub .VideoSlide .subtab {
+.Main .VideoSlide .subtab {
   justify-content: center;
   align-items: center;
   margin-bottom: 1em;
   display: none;
 }
-.Main .VideoSlide .subtab .subBtn, .Sub .VideoSlide .subtab .subBtn {
+.Main .VideoSlide .subtab .subBtn {
   padding: 0.4em 1.2em;
   margin-right: 0.7em;
   border-radius: 1em;
   font-size: 0.9em;
   font-weight: 600;
 }
-.Main .VideoSlide .subtab.onePoint.on, .Sub .VideoSlide .subtab.onePoint.on {
+.Main .VideoSlide .subtab.onePoint.on {
   display: inline-flex;
 }
-.Main .VideoSlide .subtab.onePoint .subBtn.on, .Sub .VideoSlide .subtab.onePoint .subBtn.on {
+.Main .VideoSlide .subtab.onePoint .subBtn.on {
   background-color: rgb(255, 217, 0);
   color: #6D301B;
 }
-.Main .VideoSlide .subtab.chippo.on, .Sub .VideoSlide .subtab.chippo.on {
+.Main .VideoSlide .subtab.chippo.on {
   display: inline-flex;
 }
-.Main .VideoSlide .subtab.chippo .subBtn.on, .Sub .VideoSlide .subtab.chippo .subBtn.on {
+.Main .VideoSlide .subtab.chippo .subBtn.on {
   background-color: #1C3664;
   color: rgb(255, 217, 0);
 }
-.Main .VideoSlide .slideWrap, .Sub .VideoSlide .slideWrap {
+.Main .VideoSlide .slideWrap {
   width: 100%;
   overflow: hidden;
   position: relative;
   width: 100vw;
   left: -1.5em;
 }
-.Main .VideoSlide .slideWrap .swiper, .Sub .VideoSlide .slideWrap .swiper {
+.Main .VideoSlide .slideWrap .swiper {
   position: relative;
   width: 100vw;
 }
-.Main .VideoSlide .slideWrap .swiper-wrapper, .Sub .VideoSlide .slideWrap .swiper-wrapper {
+.Main .VideoSlide .slideWrap .swiper-wrapper {
   display: flex;
   align-items: center;
 }
-.Main .VideoSlide .slideWrap .slideArea, .Sub .VideoSlide .slideWrap .slideArea {
+.Main .VideoSlide .slideWrap .slideArea {
   display: flex;
   transition: all 0s;
   justify-content: flex-start;
   align-items: center;
   position: relative;
 }
-.Main .VideoSlide .slideWrap .slideArea .swiper-slide, .Sub .VideoSlide .slideWrap .slideArea .swiper-slide {
+.Main .VideoSlide .slideWrap .slideArea .swiper-slide {
   width: auto;
   flex-shrink: 0;
   position: relative;
 }
-.Main .VideoSlide .slideWrap .slideArea .swiper-slide a, .Sub .VideoSlide .slideWrap .slideArea .swiper-slide a {
+.Main .VideoSlide .slideWrap .slideArea .swiper-slide a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.Main .VideoSlide .slideWrap .slideArea .swiper-slide a img, .Sub .VideoSlide .slideWrap .slideArea .swiper-slide a img {
+.Main .VideoSlide .slideWrap .slideArea .swiper-slide a img {
   width: 100%;
   height: auto;
   max-width: 500px;
   max-height: 300px;
 }
-.Main .VideoSlide .slideWrap .slideArea .swiper-slide a:focus, .Sub .VideoSlide .slideWrap .slideArea .swiper-slide a:focus {
+.Main .VideoSlide .slideWrap .slideArea .swiper-slide a:focus {
   box-sizing: border-box !important;
   border: 3px solid #00a0e9 !important;
   outline: none;
 }
-.Main .CoachSlide .swiper, .Sub .CoachSlide .swiper {
+.Main .CoachSlide .swiper {
   position: relative;
   left: -1.5em;
   width: 100vw;
 }
-.Main .CoachSlide .maintab, .Sub .CoachSlide .maintab {
+.Main .CoachSlide .maintab {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 1em;
 }
-.Main .CoachSlide .swiper-slide, .Sub .CoachSlide .swiper-slide {
+.Main .CoachSlide .swiper-slide {
   width: auto;
 }
-.Main .CoachSlide .coachBox, .Sub .CoachSlide .coachBox {
+.Main .CoachSlide .coachBox {
   width: 300px;
   height: 240px;
   display: block;
@@ -312,19 +312,19 @@
   transition: outline 0.3s, transform 0.3s, box-shadow 0.3s;
   position: relative;
 }
-.Main .CoachSlide .coachBox:hover, .Sub .CoachSlide .coachBox:hover {
+.Main .CoachSlide .coachBox:hover {
   outline: 3px solid #76B804;
   z-index: 10;
   transform: translate(-0.3em, -0.3em);
   box-shadow: 0.3em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
-.Main .CoachSlide .coachBox:focus, .Sub .CoachSlide .coachBox:focus {
+.Main .CoachSlide .coachBox:focus {
   outline: 3px solid #76B804;
   z-index: 10;
   transform: translate(-0.3em, -0.3em);
   box-shadow: 0.3em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
-.Main .CoachSlide .coachBox .cate, .Sub .CoachSlide .coachBox .cate {
+.Main .CoachSlide .coachBox .cate {
   white-space: nowrap;
   font-size: 0.95em;
   padding: 0.5em 1em;
@@ -335,7 +335,7 @@
   color: #fff;
   z-index: 0;
 }
-.Main .CoachSlide .coachBox .cate:before, .Sub .CoachSlide .coachBox .cate:before {
+.Main .CoachSlide .coachBox .cate:before {
   position: absolute;
   content: "";
   z-index: -1;
@@ -346,16 +346,16 @@
   transform: skewX(-45deg);
   background-color: #76B804;
 }
-.Main .CoachSlide .coachBox .cate h2, .Sub .CoachSlide .coachBox .cate h2 {
+.Main .CoachSlide .coachBox .cate h2 {
   font-weight: 500;
 }
-.Main .CoachSlide .coachBox .subCate, .Sub .CoachSlide .coachBox .subCate {
+.Main .CoachSlide .coachBox .subCate {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0.8em 0;
 }
-.Main .CoachSlide .coachBox .subCate h3, .Sub .CoachSlide .coachBox .subCate h3 {
+.Main .CoachSlide .coachBox .subCate h3 {
   font-size: 0.8em;
   font-weight: 400;
   padding: 0.3em 0.7em;
@@ -365,15 +365,15 @@
   box-sizing: border-box;
   border: 1px solid #76B804;
 }
-.Main .CoachSlide .coachBox .subCate h3.new, .Sub .CoachSlide .coachBox .subCate h3.new {
+.Main .CoachSlide .coachBox .subCate h3.new {
   background-color: #76B804;
   color: #fff;
 }
-.Main .CoachSlide .coachBox .title, .Sub .CoachSlide .coachBox .title {
+.Main .CoachSlide .coachBox .title {
   width: 100%;
   font-size: 16px;
 }
-.Main .CoachSlide .coachBox .title h1, .Sub .CoachSlide .coachBox .title h1 {
+.Main .CoachSlide .coachBox .title h1 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -383,78 +383,78 @@
   font-weight: 600;
   color: #2d2d2d;
 }
-.Main .CoachSlide .coachBox .context, .Sub .CoachSlide .coachBox .context {
+.Main .CoachSlide .coachBox .context {
   padding: 1em 0;
   font-size: 0.85em;
   color: #2d2d2d;
 }
-.Main .ServiceIntro, .Sub .ServiceIntro {
+.Main .ServiceIntro {
   padding: 0;
 }
-.Main .ServiceIntro .titleArea, .Sub .ServiceIntro .titleArea {
+.Main .ServiceIntro .titleArea {
   width: 100%;
   text-align: center;
   background-color: #003F74;
   padding: 2em 0;
 }
-.Main .ServiceIntro .titleArea .title, .Sub .ServiceIntro .titleArea .title {
+.Main .ServiceIntro .titleArea .title {
   font-size: 1.5em;
   color: #fff;
   margin: 0;
   margin-bottom: 0.5em;
 }
-.Main .ServiceIntro .titleArea .subTitle, .Sub .ServiceIntro .titleArea .subTitle {
+.Main .ServiceIntro .titleArea .subTitle {
   font-size: 1em;
   color: #fff;
   font-weight: 400;
 }
-.Main .ServiceIntro .titleArea .subTitle strong, .Sub .ServiceIntro .titleArea .subTitle strong {
+.Main .ServiceIntro .titleArea .subTitle strong {
   font-weight: 600;
 }
-.Main .ServiceIntro .cardArea, .Sub .ServiceIntro .cardArea {
+.Main .ServiceIntro .cardArea {
   padding: 4em 0 2em;
 }
-.Main .ServiceIntro .cardArea .cardWrap, .Sub .ServiceIntro .cardArea .cardWrap {
+.Main .ServiceIntro .cardArea .cardWrap {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 3em;
 }
-.Main .ServiceIntro .cardArea .cardWrap .card, .Sub .ServiceIntro .cardArea .cardWrap .card {
+.Main .ServiceIntro .cardArea .cardWrap .card {
   width: 12em;
   margin-right: 1.5em;
   background-color: #EEF1F8;
   box-shadow: 0.15em 0.15em 0.4em rgba(0, 0, 0, 0.25);
   border-radius: 0.5em;
 }
-.Main .ServiceIntro .cardArea .cardWrap .card:last-child, .Sub .ServiceIntro .cardArea .cardWrap .card:last-child {
+.Main .ServiceIntro .cardArea .cardWrap .card:last-child {
   margin-right: 0;
 }
-.Main .ServiceIntro .cardArea .cardWrap .card .imgWrap, .Sub .ServiceIntro .cardArea .cardWrap .card .imgWrap {
+.Main .ServiceIntro .cardArea .cardWrap .card .imgWrap {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3em 0;
   background-color: #fff;
 }
-.Main .ServiceIntro .cardArea .cardWrap .card .textWrap, .Sub .ServiceIntro .cardArea .cardWrap .card .textWrap {
+.Main .ServiceIntro .cardArea .cardWrap .card .textWrap {
   font-size: 0.85em;
   text-align: center;
   box-sizing: border-box;
   padding: 2em 0.5em;
   word-break: keep-all;
 }
-.Main .ServiceIntro .cardArea .cardWrap .card .textWrap strong, .Sub .ServiceIntro .cardArea .cardWrap .card .textWrap strong {
+.Main .ServiceIntro .cardArea .cardWrap .card .textWrap strong {
   font-weight: 600;
   color: #003F74;
 }
-.Main .ServiceIntro .cardArea .btnArea, .Sub .ServiceIntro .cardArea .btnArea {
+.Main .ServiceIntro .cardArea .btnArea {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Main .ServiceIntro .cardArea .btnArea .btn, .Sub .ServiceIntro .cardArea .btnArea .btn {
+.Main .ServiceIntro .cardArea .btnArea .btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -464,25 +464,25 @@
   padding: 0.7em;
   background-color: #003F74;
 }
-.Main .Footer, .Sub .Footer {
+.Main .Footer {
   padding: 0;
   margin: 0;
   text-align: center;
   padding: 2em 0;
   background-color: #06223A;
 }
-.Main .Footer p, .Sub .Footer p {
+.Main .Footer p {
   line-height: 1.7;
   color: #6A7A89;
   font-weight: 200;
   font-size: 0.9em;
 }
-.Main .Footer p span, .Sub .Footer p span {
+.Main .Footer p span {
   position: relative;
   margin: 0.8em;
   opacity: 0.4;
 }
-.Main .Footer p span:after, .Sub .Footer p span:after {
+.Main .Footer p span:after {
   position: absolute;
   width: 1px;
   height: 50%;
@@ -492,10 +492,10 @@
   transform: translate(0, -50%);
   left: 0;
 }
-.Main .Footer p a, .Sub .Footer p a {
+.Main .Footer p a {
   color: #6A7A89;
   transition: color 0.2s;
 }
-.Main .Footer p a:hover, .Sub .Footer p a:hover {
+.Main .Footer p a:hover {
   color: #fff;
 }/*# sourceMappingURL=main.css.map */
