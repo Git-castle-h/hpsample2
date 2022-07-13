@@ -53,7 +53,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
 summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;font-family:'Noto Sans','노토 산스',sans-serif;}
 html{height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
-body{margin:0;}
+body{margin:0; width:100vw; overflow-x: hidden;}
 /* h1,h2,h3,h4,h5,h6{font-weight:400;font-size:inherit;} */
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section{display:block;}
 legend{position:absolute; height:0; line-height:0; font-size:0; overflow:hidden; }
@@ -75,7 +75,7 @@ dl{position:relative;}
 select,textarea,input{height:50px;line-height:46px;padding:0 12px;border:2px solid #d7dade;box-sizing:border-box;color:#353738;font-size:16px;background-color:#fff}
 select::-ms-expand{display:none; }
 input:focus,select:focus,textarea:focus{border:solid 2px #3da0f2;outline:none;}
-*:focus{ outline:#3da0f2 solid 3px;}
+*:focus-visible{ outline:#3da0f2 solid 3px;}
 button[disabled],html input[disabled],textarea[disabled],select[disabled] {cursor: default;background:#f5f6f7;color:#bbc0c4;}
 button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer; overflow:visible; -webkit-appearance:button; }
 input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {height: auto;}
@@ -101,15 +101,15 @@ input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-se
 common
 ****************************************************************************/
 /* 스킵네비게이션 */
-#skip {z-index:600;position: absolute;position:fixed;top:0;left:0;width:100%;}
-#skip a {display:block;position:absolute;top:-9999px;}
-#skip a span {display: block;padding:10px 0;border:3px solid #FFB747;background: #000;color: #fff;text-align:center}
-#skip a:hover, #skip a:active, #skip a:focus {z-index: 600; top: 0; display: inline-block; width: 100%}
+#skip {z-index:600; position:fixed;top:0;left:0;width:100vw;}
+#skip a {display:block;position:absolute; top:-9999px;width: 100%;}
+#skip a span {display: block; padding:10px 0;border:3px solid #FFB747;background: #000;color: #fff;text-align:center}
+#skip a:hover, #skip a:active, #skip a:focus {z-index: 600; top: 0; left:0; display: inline-block; width: 100%}
 
 /* global */
 .not_scroll {position:fixed;overflow:hidden;width:100%;height:100%}
 .ovh {overflow:hidden;height:100%}
-.screen_out {overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px} /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.screen_out {  position: relative;z-index: -1;display: inline-block;overflow: hidden;height: 1px;width: 1px;border: 0;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);word-break: initial;word-wrap: initial;} /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
 .line_clamp1 {display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:1;-webkit-box-orient:vertical} /* 한줄 텍스트 말줄임 */
 .line_clamp2 {display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .line_clamp3 {display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical}

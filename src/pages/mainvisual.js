@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 
 function Mainvisual(){
     return(
-        <section className="mainVisual">
+        <section className="mainVisual" id='mainVisual'>
                 <div className="univBox">
                     <img className='logo' src={process.env.PUBLIC_URL+'/images/main/cam_logo.png'} alt="" />
                     <h1 className='title'>
