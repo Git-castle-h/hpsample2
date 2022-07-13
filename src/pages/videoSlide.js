@@ -48,7 +48,7 @@ function VideoSlide(){
                     // pagination={{clickable:true}}
                     className="mySwiper"
                     loop={true}
-                    loopedSlides={8}
+                    // loopedSlides={8}
                 >
                         <SwiperSlide>
                         <a href=""><img src={process.env.PUBLIC_URL+'/images/video/thumbnail/video_thumbnail_jobfind01.png'} alt="취업코칭 동영상 이미지" /></a>

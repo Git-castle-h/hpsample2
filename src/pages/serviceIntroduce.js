@@ -42,7 +42,7 @@ function ServiceIntroduce(){
                     </div>
                 </div>
                 <div className="btnArea">
-                    <a className="btn">취업코칭 신청하기</a>
+                    <a href='subpage' className="btn">취업코칭 신청하기</a>
                 </div>
             </div>
         </section>

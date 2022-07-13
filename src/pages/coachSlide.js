@@ -38,7 +38,7 @@ function CoachSlide(){
                     scrollbar
                     // navigation={true}
                     loop={true}
-                    loopedSlides={8}
+                    // loopedSlides={8}
                 >
                         <SwiperSlide>
                             <a href='#' className="coachBox">
