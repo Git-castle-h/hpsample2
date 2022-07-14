@@ -1,8 +1,21 @@
+@charset "UTF-8";
+/*변수*/
+/*반응형 화면 크기*/
+/*반응형, 브라우저 크기가 500px 이하일때*/
+/*반응형, 브라우저 크기가 767px 이하일때*/
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+/*넓이, 높이 자동 계산함수*/
 .Sub {
   float: right;
   width: calc(100vw - 80px);
   padding-top: 50px;
   text-align: left;
+}
+@media (max-width: 767px) {
+  .Sub {
+    width: 100vw;
+  }
 }
 .Sub section {
   margin-bottom: 4em;
@@ -27,8 +40,14 @@
   font-size: 2em;
 }
 .Sub .tabArea {
-  padding: 2em 3.5em 0;
+  margin: 2em 3.5em 0;
   box-sizing: border-box;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .Sub .tabArea {
+    font-size: 0.8em;
+  }
 }
 .Sub .tabArea .tabWrap {
   display: flex;
@@ -36,6 +55,7 @@
   align-items: center;
   width: 100%;
   position: relative;
+  left: 0px;
 }
 .Sub .tabArea .tabWrap:after {
   position: absolute;
@@ -51,6 +71,7 @@
   padding: 0.5em 1em;
   position: relative;
   font-weight: 600;
+  flex-shrink: 0;
 }
 .Sub .tabArea .tabWrap .tab.on:after {
   position: absolute;
@@ -62,22 +83,27 @@
   transform: translateX(-50%);
   background-color: #003F74;
 }
-.Sub .subName {
+.Sub .sub {
   padding: 2em 3.5em 0;
   box-sizing: border-box;
   display: none;
 }
-.Sub .subName.on {
+.Sub .sub.on {
   display: block;
 }
-.Sub .subName .titleArea {
+@media (max-width: 500px) {
+  .Sub .sub {
+    padding: 2em 1.5em 0;
+  }
+}
+.Sub .sub .titleArea {
   margin-bottom: 0.8em;
 }
-.Sub .subName .titleArea .mainTitleWrap {
+.Sub .sub .titleArea .mainTitleWrap {
   position: relative;
   margin-bottom: 0.7em;
 }
-.Sub .subName .titleArea .mainTitleWrap:after {
+.Sub .sub .titleArea .mainTitleWrap:after {
   width: 100%;
   height: 2px;
   background-color: #003F74;
@@ -88,7 +114,7 @@
   z-index: -1;
   transform: translateY(-50%);
 }
-.Sub .subName .titleArea .mainTitleWrap .mainTitle {
+.Sub .sub .titleArea .mainTitleWrap .mainTitle {
   font-size: 1.75em;
   font-weight: 600;
   background-color: #fff;
@@ -96,19 +122,28 @@
   display: inline-flex;
   margin: 0;
 }
-.Sub .subName .titleArea .subTitleWrap .subTitle {
+.Sub .sub .titleArea .subTitleWrap .subTitle {
   font-weight: 400;
 }
-.Sub .subName .contextArea {
+.Sub .sub .contextArea {
   display: flex;
 }
-.Sub .subName .contextArea .imageWrap {
+.Sub .sub .contextArea .imageWrap {
   width: 15em;
   height: 20em;
   flex-shrink: 0;
   margin-right: 1em;
   background-color: rgb(224, 224, 224);
 }
-.Sub .subName .contextArea .textWrap p {
+.Sub .sub .contextArea .textWrap p {
   line-height: 1.4;
+}
+@media (max-width: 767px) {
+  .Sub .sub .contextArea {
+    flex-direction: column;
+  }
+  .Sub .sub .contextArea .imageWrap {
+    width: 100%;
+    margin-bottom: 1em;
+  }
 }/*# sourceMappingURL=sub.css.map */

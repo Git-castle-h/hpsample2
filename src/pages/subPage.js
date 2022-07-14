@@ -7,8 +7,8 @@ function Sub(){
                 <div className="subVisual">
                     <h1 className='title'>서브페이지</h1>
                 </div>
-            <div className="tabArea" onClick={subTabClick}>
-                <div className="tabWrap" >
+            <div className="tabArea" onClick={subTabClick} onMouseDown={subTabDown} onMouseUp={subTabLeave} onMouseMove={subTabMove} onMouseLeave={subTabLeave}>
+                <div className="tabWrap" style={{left : '0px'}} >
                     <button className="tab tab1 on">Sub tab1</button>
                     <button className="tab tab2">Sub tab2</button>
                     <button className="tab tab3">Sub tab3</button>
@@ -76,6 +76,11 @@ function Sub(){
 }
 let tabArr;
 let subArr;
+let subTabArea;
+let subTabWrap;
+let subTabLeft;
+let subMove = false;
+let originX;
 
 function subTabClick(evt){
     tabArr  = document.querySelectorAll('.Sub .tabArea .tab');
@@ -100,4 +105,54 @@ function subTabClick(evt){
     }
 
 }
+
+function subTabDown(evt){
+    subTabArea = document.querySelector('.Sub .tabArea');
+    subTabWrap = document.querySelector('.Sub .tabWrap');
+    let areaWidth = subTabArea.clientWidth;
+    let subTabWidth = subTabWrap.scrollWidth;
+    subTabLeft = parseInt(subTabWrap.style.left);
+    console.log(subTabLeft);
+    originX = evt.clientX;
+    if(areaWidth < subTabWidth){
+    subMove = true;
+    console.log(subMove);
+    }
+
+
+}
+
+function subTabLeave(evt){
+    subMove = false;
+
+    tabArr  = document.querySelectorAll('.Sub .tabArea .tab');
+    for(let ie11i = 0; ie11i < tabArr.length; ie11i++){
+        let i = ie11i;
+        tabArr[i].style.pointerEvents='auto';
+    }
+}
+
+
+function subTabMove(evt){
+    evt.preventDefault();
+    if(subMove){
+    subTabArea = document.querySelector('.Sub .tabArea');
+    subTabWrap = document.querySelector('.Sub .tabWrap');
+    let mouseX = evt.clientX;
+    let distance = mouseX - originX;
+    let result = distance + subTabLeft;
+    // console.log(result);
+    
+    subTabWrap.style.left = result+'px';
+
+    tabArr  = document.querySelectorAll('.Sub .tabArea .tab');
+    for(let ie11i = 0; ie11i < tabArr.length; ie11i++){
+        let i = ie11i;
+        tabArr[i].style.pointerEvents='none';
+    }
+    }
+
+
+}
+
 export{Sub}

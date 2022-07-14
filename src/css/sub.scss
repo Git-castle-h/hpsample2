@@ -1,8 +1,13 @@
+@import './variables/variable.scss';
+
 .Sub{
     float:right;
     width:calc(100vw - 80px);
     padding-top:50px;
     text-align: left;
+    @include mobile{
+        width:100vw;
+    }
     section{
         margin-bottom: 4em;
         padding:0 1.5em;
@@ -27,14 +32,19 @@
         }
     }
     .tabArea{
-        padding:2em 3.5em 0;
+        margin:2em 3.5em 0;
         box-sizing: border-box;  
+        overflow: hidden;
+        @include mobile{
+            font-size: 0.8em;
+        }
     .tabWrap{
         display: flex;
         justify-content: flex-start;
         align-items: center;
         width: 100%;
         position: relative;
+        left:0px;
         &:after{
             position: absolute;
             width:100%;
@@ -49,6 +59,7 @@
             padding:0.5em 1em;
             position: relative;
             font-weight: 600;
+            flex-shrink: 0;
             &.on{
                 &:after{
                     position: absolute;
@@ -66,12 +77,15 @@
         }
     }
     }
-    .subName{
+    .sub{
         padding:2em 3.5em 0;
         box-sizing: border-box;
         display: none;
         &.on{
             display: block;
+        }
+        @include small{
+            padding: 2em 1.5em 0;
         }
         .titleArea{
             margin-bottom: 0.8em;
@@ -107,6 +121,7 @@
         }
         .contextArea{
             display: flex;
+            
             .imageWrap{
                 width:15em;
                 height:20em;
@@ -117,6 +132,13 @@
             .textWrap{
                 p{
                     line-height: 1.4;
+                }
+            }
+            @include mobile{
+                flex-direction: column;
+                .imageWrap{
+                    width: 100%;
+                    margin-bottom: 1em;
                 }
             }
         }

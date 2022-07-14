@@ -1,3 +1,5 @@
+@import './variables/variable.scss';
+
 .roundRect_btn{
     padding:0.5em 2em;
     border-radius: 2em;
@@ -9,6 +11,10 @@
     padding-top:50px;
     text-align: left;
 
+    @include mobile{
+        width:calc(100vw);
+    }
+
     section{
         margin-bottom: 4em;
         padding:0 1.5em;
@@ -18,6 +24,9 @@
         display: inline-block;
         font-weight: 600;
         font-size: 1.7em;
+        @include mobile{
+            font-size: 2em;
+        }
     }
 
     .mainVisual{
@@ -36,6 +45,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            word-break: keep-all;
+            text-align: center;
             .logo{
                 width:100px;
                 height:140px;
@@ -205,6 +216,9 @@
             justify-content: flex-start;
             align-items: center;
             margin-bottom: 1em;
+            @include mobile{
+                flex-direction: column;
+            }
             .select{
                 display: flex;
                 justify-content: flex-start;
@@ -237,10 +251,14 @@
         }
 
         .subtab{
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             margin-bottom: 1em;
             display:none;
+            flex-wrap: wrap;
+            @include mobile{
+                justify-content: center;
+            }
             .subBtn{
                 padding:0.4em 1.2em;
                 margin-right:0.7em;
@@ -325,7 +343,6 @@
         
         }
     }
-$CoachColor : #76B804;
     .CoachSlide{
         .swiper{
             // min-width: 1600px;
@@ -338,6 +355,9 @@ $CoachColor : #76B804;
             justify-content: flex-start;
             align-items: center;
             margin-bottom: 1em;
+            @include mobile{
+                justify-content: center;
+            }
         }
         .swiper-slide{
             width:auto;
@@ -441,7 +461,9 @@ $CoachColor : #76B804;
             width:100%;
             text-align: center;
             background-color: #003F74;
-            padding:2em 0;
+            box-sizing: border-box;
+            padding:2em;
+            word-break: keep-all;
             .title{
                 font-size: 1.5em;
                 color:#fff;
@@ -454,6 +476,7 @@ $CoachColor : #76B804;
                 font-weight: 400;
                 strong{
                     font-weight: 600;
+                    display: inline-block;
                 }
             }
         }
@@ -491,6 +514,34 @@ $CoachColor : #76B804;
                             color: #003F74;
                         }
                     }
+                }
+                @include mobile{
+                    flex-direction: column;
+                    justify-content: center;
+                    .card{
+                        display: flex;
+                        justify-content:flex-start;
+                        align-items: center;
+                        width:80%;
+                        margin-right: 0;
+                        margin-bottom: 1em;
+                        .imgWrap{
+                            padding:1em;
+                            img{
+                                width:2.5em;
+                                height:auto;
+                            }
+                        }
+                        .textWrap{
+                            width: 100%;
+                            font-size: 0.85em;
+                            text-align: center;
+                            box-sizing: border-box;
+                            padding:0.5em 0.5em;
+                            word-break: keep-all;
+                        }
+                    }
+
                 }
             }
             .btnArea{
@@ -549,4 +600,5 @@ $CoachColor : #76B804;
     }
 
 }
+
 

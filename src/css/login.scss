@@ -1,8 +1,13 @@
+@import './variables/variable.scss';
+
 .Login{
     float: right;
     width: calc(100vw - 80px);
     padding-top: 50px;
     text-align: left;
+    @include mobile{
+        width:100vw;
+    }
 
     .loginArea{
         width:100%;
