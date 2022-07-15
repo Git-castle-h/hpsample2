@@ -5,7 +5,7 @@ import {Login} from './pages/login.js';
 import {Skip} from './pages/skip.js';
 import { Sub } from './pages/subpage';
 import { Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './css/font.css';
 import './css/App.css';
 import './css/nomalize.css';
@@ -18,15 +18,13 @@ import './css/login.css';
 function App() {
   return (
     <div className="App">    
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Routes>
-        <Route path ='/hpsample2'>
-          <Route path ='' element={<MainPage></MainPage>}></Route>
-          <Route path ='subpage' element={<SubPage></SubPage>}></Route>
-          <Route path ='login' element={<LoginPage></LoginPage>}></Route>
-        </Route>
-      </Routes>
-      </BrowserRouter>
+      <Router basename ='hpsample2'>
+        <Routes>
+            <Route path ='' element={<MainPage></MainPage>}></Route>
+            <Route path ='subpage' element={<SubPage></SubPage>}></Route>
+            <Route path ='login' element={<LoginPage></LoginPage>}></Route>
+        </Routes>
+      </Router>
     </div>
 
   );
