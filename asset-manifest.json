@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hpsample2/static/css/main.7ee11576.css",
-    "main.js": "/hpsample2/static/js/main.d394514e.js",
+    "main.css": "/hpsample2/static/css/main.2911ff47.css",
+    "main.js": "/hpsample2/static/js/main.7be53f82.js",
     "static/js/787.9cefb644.chunk.js": "/hpsample2/static/js/787.9cefb644.chunk.js",
     "static/media/NotoSansKR-Black.otf": "/hpsample2/static/media/NotoSansKR-Black.dba005b6b1bed712b472.otf",
     "static/media/NotoSansKR-Bold.otf": "/hpsample2/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
@@ -10,17 +10,18 @@
     "static/media/NotoSansKR-Light.otf": "/hpsample2/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
     "static/media/NotoSansKR-Thin.otf": "/hpsample2/static/media/NotoSansKR-Thin.a3e74b5ef0ed5ab193f5.otf",
     "static/media/main_visual_bg.png": "/hpsample2/static/media/main_visual_bg.b30bf6e268ec29f23f84.png",
+    "static/media/main_visual_img.png": "/hpsample2/static/media/main_visual_img.ccb8f904a9186e7ab4d1.png",
     "static/media/chippo_off.svg": "/hpsample2/static/media/chippo_off.4cd3ff05d7f529f27f5e.svg",
     "static/media/chippo_on.svg": "/hpsample2/static/media/chippo_on.61568158c01dbc897d5d.svg",
     "static/media/onepoint_on.svg": "/hpsample2/static/media/onepoint_on.4d2177f6e976255e2374.svg",
     "static/media/onepoint_off.svg": "/hpsample2/static/media/onepoint_off.1a5e25606578aa9bd8f7.svg",
     "index.html": "/hpsample2/index.html",
-    "main.7ee11576.css.map": "/hpsample2/static/css/main.7ee11576.css.map",
-    "main.d394514e.js.map": "/hpsample2/static/js/main.d394514e.js.map",
+    "main.2911ff47.css.map": "/hpsample2/static/css/main.2911ff47.css.map",
+    "main.7be53f82.js.map": "/hpsample2/static/js/main.7be53f82.js.map",
     "787.9cefb644.chunk.js.map": "/hpsample2/static/js/787.9cefb644.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ee11576.css",
-    "static/js/main.d394514e.js"
+    "static/css/main.2911ff47.css",
+    "static/js/main.7be53f82.js"
   ]
 }
