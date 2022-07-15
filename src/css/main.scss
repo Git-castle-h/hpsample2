@@ -7,7 +7,7 @@
 
 .Main{
     float:right;
-    width:calc(100vw - 80px);
+    width: 100vw;
     padding-top:50px;
     text-align: left;
 
@@ -28,185 +28,276 @@
             font-size: 2em;
         }
     }
+    .titleArea{
+        margin-right: 1.5em;
+        .title{
+            margin:0;
+            margin-bottom: 0.2em;
+            .normal{
+                font-weight: 400;
+            }
+        }
+        .subTitle{
+            font-weight: 500;
+            font-size: 0.8em;
+        }
+    }   
+
 
     .mainVisual{
-        width:100%;
-        height:370px;
+        width: calc(100%);
         display: flex;
         position:relative;
-        justify-content: center;
-        align-items: center;
+        justify-content:center;
+        align-items: flex-end;
         flex-direction: column;
-        background-image: url(../../public/images/main/main_visual_bg.png);
-        background-size: cover;
-        background-position: 50% 50%;
-        .univBox{
+        padding:0;
+        @include mobile{
+            align-items: center;
+            font-size: 0.9em;
+        }
+        .mvBoxWrap{
+            width: calc(100% - 5em);
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            word-break: keep-all;
-            text-align: center;
-            .logo{
-                width:100px;
-                height:140px;
+            padding:5em 0 1em;
+            background-color: #C9EFFF;
+            border-radius: 13em 0 0 5em;
+            background-image: url(../../public/images/main/main_visual_img.png);
+            background-repeat: no-repeat;
+            background-position:30% 100%;
+            background-size: auto 12em;
+            @include tablet{
+                background-position:10% 100%;
+                background-size: auto 12em;
             }
-            .title{
-                color:#fff;
-                font-weight: 500;
-                font-size: 1.2em;
-                padding:0.5em;
+            @include mobile{
+                justify-content: flex-end;    
+                width: calc(100% - 1em);
+                background-image: none;
             }
-            .univ_btn{
-                color:#fff;
-                font-size: 1em;   
-                border:1px solid #fff;
-                background-color: rgba(0,0,0,0.5);
+            @include small{
+                justify-content: center;    
+                width: calc(100%);
+                border-radius: 0;
             }
-
-        }
-     
-        // About Camco===========================
-        .aboutCamcoWrap{
+        .mvBox{
+            min-width: 1000px;
+            @include tablet{
+                min-width: 768px;
+            }
+            @include mobile{
+                min-width: 500px;
+                margin-right: 3em;
+            }
+            @include small{
+                min-width: unset;
+                margin-right: 0;
+            }
             display: flex;
-            width:100%;
-            padding:1.5em 0em 0em;
-            justify-content: flex-start;
-            align-items: center;
-            .about_CamCo{
-                position:relative;
-                box-sizing: content-box;
-                left:0%;
-                padding: 0.5em;
-                background-color: #fff;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: all 0.3s;
-                pointer-events: auto;
-                -webkit-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.2); 
-                box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.2);
-            }
-            
-            .about_CamCo:hover{
-                background-color: #00a0e9;
-            
-            }
-            
-            .about_CamCo.on{
-                background-color: #00a0e9;
-            }
-            
-            .about_CamCo .CamCoImg{
-                width:1.7em;
-                height:1.7em;
-                background-image: url(../../public/images/common/coachjob_logo.png);
-                background-size: contain;
-                background-position: 40% 50%;
-                background-repeat: no-repeat;
-                z-index: 20;
-            }
-            
-            .about_CamCo .CamCoTxt{
-                position: absolute;
-                text-align: left;
-                color:#fff;
-                text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.7);
-                top:50%;
-                transform: translateY(-50%);
-                font-size: 1em;
-                left:calc(100% + 10px);
-                width:300px;
-                transition: all 0.5s;
-                overflow: hidden;
-                white-space: nowrap;
-                vertical-align: top;
-                font-family: 'Noto Sans KR Regular', 'NanumGothic', '나눔고딕', sans-serif;
-                opacity: 1;
-            }
-            
-            .about_CamCo .CamCoTxt.two{
-                word-break: break-all;
-                transition: all 0.5s;
-                opacity: 0;
-            }
-            
-            .about_CamCo:hover .CamCoTxt.one{
-                opacity: 0;
-            }
-            
-            .about_CamCo:hover .CamCoTxt.two{
-                opacity: 1;
-            }
-            .about_CamCo .click_flicker{
-                color:#ffd54f;
-                font-weight: 600;
-                /* animation: ClickFlicker 1s alternate infinite; */
-            }
-            
-            @keyframes ClickFlicker{
-                0%{
-                color:#ffd54f;
+            position:relative;
+            justify-content: center;
+            align-items: flex-end;
+            flex-direction: column;
+
+            .univBox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                word-break: keep-all;
+                text-align: center;
+                .logo{
+                    width:6em;
+                    height:auto;
+                    padding:0 2em 1.5em;
+                    box-sizing: content-box;
+                    @include small{
+                        display: none;
+                    }
                 }
-                100%{
-                color:#fff;
+                .titleWrap{
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 5em;
+                    text-align: left;
+                    @include small{
+                        margin-right: 0;
+                    }
+                    .mainTitle{
+                        color:#2d2d2d;
+                        font-weight: 600;
+                        font-size: 1.7em;
+                        margin: 0;
+                        margin-bottom: 0.1em;
+                    }
+                    .subTitle{
+                        color:#2d2d2d;
+                        font-size: 1.08em;
+                        font-weight: 600;
+                    }
+                    .contextWrap{
+                        padding:0.5em 0;
+                        .context{
+                            font-size: 0.9em;
+                            line-height: 1.3;
+                            strong{
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .btnArea{
+                        width:100%;
+                        margin-top: 1em;
+                        .univ_btn{
+                            text-align: center;
+                            color:#fff;
+                            font-size: 1em;   
+                            padding: 0.3em 2em;
+                            background-color: #2d2d2d;
+                        }
+                    }
                 }
-            
+
             }
-            
-            
-            .about_CamCo .CamCo_video{
-                position: absolute;
-                bottom:20px;
-                left:calc(100% + 10px);
-                width:0px;
-                height:auto;
-                transition: all 0.3s;
-            }
-            
-            .about_CamCo.on .CamCo_video{
-                background-color: #000;
-                transition: all 0.3s;
-                width:500px;
-                height:auto;
-            }
-            
-            .about_CamCo:hover .CamCoTxt.two{
-                opacity: 1;
-            }
-            .about_CamCo .click_flicker{
-                color:#ffd54f;
-                font-weight: 600;
-                /* animation: ClickFlicker 1s alternate infinite; */
-            }
-            
-            @keyframes ClickFlicker{
-                0%{
-                color:#ffd54f;
+        
+            // About Camco===========================
+            .aboutCamcoWrap{
+                display: flex;
+                width:100%;
+                padding:1.5em 2em 0em;
+                justify-content: flex-end;
+                align-items: center;
+                @include small{
+                    padding-right: 0;
                 }
-                100%{
-                color:#fff;
+                .about_CamCo{
+                    position:relative;
+                    box-sizing: content-box;
+                    left:0%;
+                    padding: 0.5em;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    pointer-events: auto;
+                    -webkit-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.2); 
+                    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
                 }
-            
+                
+                .about_CamCo:hover{
+                    background-color: #00a0e9;
+                
+                }
+                
+                .about_CamCo.on{
+                    background-color: #00a0e9;
+                }
+                
+                .about_CamCo .CamCoImg{
+                    width:1.7em;
+                    height:1.7em;
+                    background-image: url(../../public/images/common/coachjob_logo.png);
+                    background-size: contain;
+                    background-position: 40% 50%;
+                    background-repeat: no-repeat;
+                    z-index: 20;
+                }
+                
+                .about_CamCo .CamCoTxt{
+                    position: absolute;
+                    text-align: left;
+                    color:#575757;
+                    font-weight: 600;
+                    // text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.7);
+                    top:50%;
+                    transform: translateY(-50%);
+                    font-size: 1em;
+                    right:calc(100% + 1em);
+                    transition: all 0.5s;
+                    white-space: nowrap;
+                    vertical-align: top;
+                    font-family: 'Noto Sans KR Regular', 'NanumGothic', '나눔고딕', sans-serif;
+                    opacity: 1;
+                }
+                
+                .about_CamCo .CamCoTxt.two{
+                    word-break: break-all;
+                    transition: all 0.5s;
+                    opacity: 0;
+                }
+                
+                .about_CamCo:hover .CamCoTxt.one{
+                    opacity: 0;
+                }
+                
+                .about_CamCo:hover .CamCoTxt.two{
+                    opacity: 1;
+                }
+                .about_CamCo .click_flicker{
+                    color:#ffd54f;
+                    font-weight: 600;
+                    /* animation: ClickFlicker 1s alternate infinite; */
+                }
+                
+                @keyframes ClickFlicker{
+                    0%{
+                    color:#ffd54f;
+                    }
+                    100%{
+                    color:#fff;
+                    }
+                
+                }
+                
+                
+                .about_CamCo:hover .CamCoTxt.two{
+                    opacity: 1;
+                }
+                .about_CamCo .click_flicker{
+                    color:#ffd54f;
+                    font-weight: 600;
+                    /* animation: ClickFlicker 1s alternate infinite; */
+                }
+                
+                @keyframes ClickFlicker{
+                    0%{
+                    color:#ffd54f;
+                    }
+                    100%{
+                    color:#fff;
+                    }
+                
+                }
+                
+                
+                .about_CamCo .CamCo_video{
+                    position: absolute;
+                    bottom:20px;
+                    // overflow: hidden;
+                    right:calc(100% + 10px);
+                    width:0px;
+                    height:auto;
+                    transition: all 0.3s;
+                    @include mobile{
+                        bottom:calc(100% + 1em);
+                        right:calc(100% - 3em);
+                       }
+                }
+                
+                .about_CamCo.on .CamCo_video{
+                    background-color: #000;
+                    transition: all 0.3s;
+                    width:500px;
+                    height:auto;
+                    @include mobile{
+                        width: 300px;
+                       }
+                }
+            // About Camco end============
             }
-            
-            
-            .about_CamCo .CamCo_video{
-                position: absolute;
-                bottom:20px;
-                // overflow: hidden;
-                left:calc(100% + 10px);
-                width:0px;
-                height:auto;
-                transition: all 0.3s;
             }
-            
-            .about_CamCo.on .CamCo_video{
-                background-color: #000;
-                transition: all 0.3s;
-                width:500px;
-                height:auto;
-            }
-        // About Camco end============
         }
     }
 
@@ -215,15 +306,34 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            margin-bottom: 1em;
+            margin-bottom: 1.5em;
             @include mobile{
                 flex-direction: column;
+                align-items: flex-start;
             }
-            .select{
+            .titleArea{
+                margin-right: 1.5em;
+                .title{
+                    margin:0;
+                    margin-bottom: 0.2em;
+                    .normal{
+                        font-weight: 400;
+                    }
+                }
+                .subTitle{
+                    font-weight: 500;
+                    font-size: 0.8em;
+                }
+            }   
+
+            .tabArea{
+                .select{
                 display: flex;
                 justify-content: flex-start;
-                align-items: center;
-                margin-left: 1em;
+                align-items: center; 
+                @include mobile{
+                    margin-left: -0.5em;
+                }
                 .onePoint{
                     height:2.3em;
                     width: 6.5em;
@@ -247,17 +357,18 @@
                     background-image: url(../../public/images/common/chippo_on.svg);
                     }
                 }
+                }
             }
         }
 
         .subtab{
             justify-content: flex-start;
             align-items: center;
-            margin-bottom: 1em;
+
             display:none;
             flex-wrap: wrap;
             @include mobile{
-                justify-content: center;
+                justify-content: flex-start;
             }
             .subBtn{
                 padding:0.4em 1.2em;
@@ -265,7 +376,9 @@
                 border-radius: 1em;
                 font-size: 0.9em;
                 font-weight: 600;
-                
+                @include small{
+                    font-size: 0.8em;
+                }
             }
 
             &.onePoint{
@@ -329,6 +442,7 @@
                                 height:auto;
                                 max-width: 500px;
                                 max-height: 300px;
+                                border-radius: 1.5em;
                             }
                         }
                     }
@@ -355,60 +469,65 @@
             justify-content: flex-start;
             align-items: center;
             margin-bottom: 1em;
-            @include mobile{
-                justify-content: center;
-            }
         }
         .swiper-slide{
             width:auto;
         }
         .coachBox{
-            width:300px;
+            width:320px;
             height:240px;
             display: block;
             box-sizing: border-box;
-            padding:1em 0.5em;
-            background-color: #EEF1F8;
-            box-shadow: 0px 0.2em 0.5em rgba(0, 0, 0, 0.25);
-            margin:0.5em 1em;
+            padding:1.5em;
+            border-radius: 1.5em;
+            background-color: #76B804;
+            // box-shadow: 0px 0.2em 0.5em rgba(0, 0, 0, 0.25);
+            margin:0.5em 3em 0.5em 1em;
             outline: 3px solid transparent;
             transition: outline 0.3s, transform 0.3s, box-shadow 0.3s;
             position:relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: space-between;
             &:hover{
-                outline: 3px solid $CoachColor;
                 z-index: 10;
                 transform: translate(-0.3em, -0.3em);
                 box-shadow: 0.3em 0.5em 0.5em rgba(0, 0, 0, 0.25);
             }
             &:focus{
-                outline: 3px solid $CoachColor;
                 z-index: 10;
                 transform: translate(-0.3em, -0.3em);
                 box-shadow: 0.3em 0.5em 0.5em rgba(0, 0, 0, 0.25);
             }
+            &:after{
+                position:absolute;
+                content:'';
+                bottom:0;
+                right: -2em;
+                width:0;
+                height:0;
+                border-bottom: 1em solid $CoachColor;
+                border-top: 1em solid transparent;
+                border-left: 2em solid $CoachColor;
+                border-right: 2em solid transparent;
+                
+            }
 
+                .cateArea{
                 .cate{
                     white-space: nowrap;
                     font-size: 0.95em;
-                    padding:0.5em 1em;
+                    padding: 0 1em 0.2em;
                     width: 100%;
                     left:-0.5em;
                     overflow: hidden;
                     position:relative;
                     color:#fff;
                     z-index: 0;
-                    &:before{
-                        position:absolute;
-                        content: '';
-                        z-index: -1;
-                        top:0;
-                        left:-30%;
-                        width:100%;
-                        height:100%;
-                        transform: skewX(-45deg);
-                    background-color: $CoachColor;
-                    }
+                
                     h2{
+                        color:#fff;
                         font-weight: 500;
                     }
                 }
@@ -416,16 +535,18 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
-                    padding:0.8em 0;
+                    padding:0.2em 0 0;
                     h3{
                         font-size: 0.8em;
                         font-weight: 400;
-                        padding:0.3em 0.7em;
+                        padding:0.3em 1em;
+                        white-space: nowrap;
                         margin-right: 0.5em;
                         background-color: #fff;
                         color: $CoachColor;
                         box-sizing: border-box;
-                        border: 1px solid $CoachColor;
+                        border: 1px solid #fff;
+                        border-radius: 1em;
                         &.new{
                             background-color: $CoachColor;
                             color:#fff;
@@ -433,6 +554,8 @@
                     }
 
                 }
+                }
+                .contextArea{
                 .title{
                     width:100%;
                     font-size: 16px;
@@ -443,105 +566,158 @@
                         width:100%;
                         margin:0;
                         font-size: 1em;
-                        font-weight: 600;
-                        color:#2d2d2d;
+                        font-weight: 500;
+                        color:#fff;
                     }
                 }
                 .context{
                     padding:1em 0;
                     font-size: 0.85em;
-                    color:#2d2d2d;
+                    color:#fff;
+                    font-weight: 300;
+                    line-height: 1.5;
+                }
                 }
         }
 
     }
     .ServiceIntro{
         padding:0;
-        .titleArea{
-            width:100%;
-            text-align: center;
-            background-color: #003F74;
-            box-sizing: border-box;
-            padding:2em;
-            word-break: keep-all;
-            .title{
-                font-size: 1.5em;
-                color:#fff;
-                margin: 0;
-                margin-bottom: 0.5em;
-            }
-            .subTitle{
-                font-size: 1em;
-                color:#fff;
-                font-weight: 400;
-                strong{
-                    font-weight: 600;
-                    display: inline-block;
-                }
+        position: relative;
+        margin-bottom: 0;
+        .bg66{
+            position: absolute;
+            bottom:0;
+            left:0;
+            width: 100%;
+            height:66%;
+            background: #0C9CFF;
+            z-index: -1;
+            @include mobile{
+                display: none;
             }
         }
+        .bg33{
+            position: absolute;
+            bottom:0;
+            left:0;
+            width: 100%;
+            height:33%;
+            background: #007ACD;
+            z-index: -1;
+            @include mobile{
+                display: none;
+            }
+
+        }
         .cardArea{
-            padding:4em 0 2em;
+            padding:4em 0 1.5em;
             .cardWrap{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding-bottom: 3em;
+                padding-bottom: 1.5em;
                 .card{
                     width:12em;
-                    margin-right: 1.5em;
-                    background-color: #EEF1F8;
-                    box-shadow: 0.15em 0.15em 0.4em rgba(0, 0, 0, 0.25);
+                    margin-right: 3em;
                     border-radius: 0.5em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
                     &:last-child{
                         margin-right: 0;
                     }
                     .imgWrap{
+                        width:13em;
+                        height:13em;
+                        border-radius: 50%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        padding:3em 0;
                         background-color: #fff;
+                        box-shadow: 3px -5px 8px rgba(0, 0, 0, 0.1);
+                        overflow: hidden;
+                    img{
+                        width:100%;
+                        height: auto;
+
+                    }
                     }
                     .textWrap{
                         font-size: 0.85em;
                         text-align: center;
                         box-sizing: border-box;
-                        padding:2em 0.5em;
+                        padding:1.2em 0.5em;
                         word-break: keep-all;
+                        color:#fff;
+                        font-size: 1em;
                         strong{
                             font-weight: 600;
-                            color: #003F74;
                         }
                     }
                 }
                 @include mobile{
                     flex-direction: column;
                     justify-content: center;
+                    align-items: center;
                     .card{
                         display: flex;
-                        justify-content:flex-start;
+                        justify-content:center;
                         align-items: center;
-                        width:80%;
-                        margin-right: 0;
-                        margin-bottom: 1em;
+                        flex-direction: row;
+                        width: 100%;
+                        margin:0;
+                        padding:1.5em 0;
+                        border-radius: 0;
                         .imgWrap{
-                            padding:1em;
+                            width: 8em;
+                            height:8em;
+                            flex-shrink: 0;
                             img{
-                                width:2.5em;
+                                width:100%;
                                 height:auto;
                             }
                         }
                         .textWrap{
-                            width: 100%;
-                            font-size: 0.85em;
+                            width: 50%;
+                            font-size: 1em;
                             text-align: center;
                             box-sizing: border-box;
-                            padding:0.5em 0.5em;
+                            padding:0.5em 0.5em 0.5em 1em;
                             word-break: keep-all;
                         }
-                    }
+                        &:nth-child(1){
+                            background: #0C9CFF;
+                        }
+                        &:nth-child(2){
+                            background-color: #007ACD;;
+                        }
+                        &:nth-child(3){
+                            background: #0C9CFF;
+                        }
 
+                    }
+                    @include small{
+                        .card{
+                            display: flex;
+                            justify-content:center;
+                            align-items: center;
+                            flex-direction: row;
+                            width: 100%;
+                            margin:0;
+                            padding:1.5em 0;
+                            border-radius: 0;
+                            .imgWrap{
+                                width: 5em;
+                                height:5em;
+                            }
+                            .textWrap{
+                                width: 60%;
+                                font-size: 0.9em;
+                            }
+                        }
+                    }
                 }
             }
             .btnArea{
@@ -557,9 +733,11 @@
                     width:12em;
                     font-size: 0.9em;
                     padding:0.7em;
+                    border-radius: 2em;
                     background-color: #003F74;
                 }
             }
+
         }
     }
     .Footer{

@@ -13,7 +13,7 @@
 
 .Main {
   float: right;
-  width: calc(100vw - 80px);
+  width: 100vw;
   padding-top: 50px;
   text-align: left;
 }
@@ -36,50 +36,169 @@
     font-size: 2em;
   }
 }
+.Main .titleArea {
+  margin-right: 1.5em;
+}
+.Main .titleArea .title {
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+.Main .titleArea .title .normal {
+  font-weight: 400;
+}
+.Main .titleArea .subTitle {
+  font-weight: 500;
+  font-size: 0.8em;
+}
 .Main .mainVisual {
   width: 100%;
-  height: 370px;
   display: flex;
   position: relative;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
-  background-image: url(../../public/images/main/main_visual_bg.png);
-  background-size: cover;
-  background-position: 50% 50%;
+  padding: 0;
 }
-.Main .mainVisual .univBox {
+@media (max-width: 767px) {
+  .Main .mainVisual {
+    align-items: center;
+    font-size: 0.9em;
+  }
+}
+.Main .mainVisual .mvBoxWrap {
+  width: calc(100% - 5em);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5em 0 1em;
+  background-color: #C9EFFF;
+  border-radius: 13em 0 0 5em;
+  background-image: url(../../public/images/main/main_visual_img.png);
+  background-repeat: no-repeat;
+  background-position: 30% 100%;
+  background-size: auto 12em;
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .Main .mainVisual .mvBoxWrap {
+    background-position: 10% 100%;
+    background-size: auto 12em;
+  }
+}
+@media (max-width: 767px) {
+  .Main .mainVisual .mvBoxWrap {
+    justify-content: flex-end;
+    width: calc(100% - 1em);
+    background-image: none;
+  }
+}
+@media (max-width: 500px) {
+  .Main .mainVisual .mvBoxWrap {
+    justify-content: center;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+.Main .mainVisual .mvBoxWrap .mvBox {
+  min-width: 1000px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
   flex-direction: column;
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .Main .mainVisual .mvBoxWrap .mvBox {
+    min-width: 768px;
+  }
+}
+@media (max-width: 767px) {
+  .Main .mainVisual .mvBoxWrap .mvBox {
+    min-width: 500px;
+    margin-right: 3em;
+  }
+}
+@media (max-width: 500px) {
+  .Main .mainVisual .mvBoxWrap .mvBox {
+    min-width: unset;
+    margin-right: 0;
+  }
+}
+.Main .mainVisual .mvBoxWrap .mvBox .univBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   word-break: keep-all;
   text-align: center;
 }
-.Main .mainVisual .univBox .logo {
-  width: 100px;
-  height: 140px;
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .logo {
+  width: 6em;
+  height: auto;
+  padding: 0 2em 1.5em;
+  box-sizing: content-box;
 }
-.Main .mainVisual .univBox .title {
-  color: #fff;
-  font-weight: 500;
-  font-size: 1.2em;
-  padding: 0.5em;
+@media (max-width: 500px) {
+  .Main .mainVisual .mvBoxWrap .mvBox .univBox .logo {
+    display: none;
+  }
 }
-.Main .mainVisual .univBox .univ_btn {
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5em;
+  text-align: left;
+}
+@media (max-width: 500px) {
+  .Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap {
+    margin-right: 0;
+  }
+}
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap .mainTitle {
+  color: #2d2d2d;
+  font-weight: 600;
+  font-size: 1.7em;
+  margin: 0;
+  margin-bottom: 0.1em;
+}
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap .subTitle {
+  color: #2d2d2d;
+  font-size: 1.08em;
+  font-weight: 600;
+}
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap .contextWrap {
+  padding: 0.5em 0;
+}
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap .contextWrap .context {
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap .contextWrap .context strong {
+  font-weight: 600;
+}
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap .btnArea {
+  width: 100%;
+  margin-top: 1em;
+}
+.Main .mainVisual .mvBoxWrap .mvBox .univBox .titleWrap .btnArea .univ_btn {
+  text-align: center;
   color: #fff;
   font-size: 1em;
-  border: 1px solid #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.3em 2em;
+  background-color: #2d2d2d;
 }
-.Main .mainVisual .aboutCamcoWrap {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap {
   display: flex;
   width: 100%;
-  padding: 1.5em 0em 0em;
-  justify-content: flex-start;
+  padding: 1.5em 2em 0em;
+  justify-content: flex-end;
   align-items: center;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo {
+@media (max-width: 500px) {
+  .Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap {
+    padding-right: 0;
+  }
+}
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo {
   position: relative;
   box-sizing: content-box;
   left: 0%;
@@ -89,15 +208,15 @@
   cursor: pointer;
   transition: all 0.3s;
   pointer-events: auto;
-  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo:hover {
   background-color: #00a0e9;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo.on {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo.on {
   background-color: #00a0e9;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoImg {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo .CamCoImg {
   width: 1.7em;
   height: 1.7em;
   background-image: url(../../public/images/common/coachjob_logo.png);
@@ -106,35 +225,33 @@
   background-repeat: no-repeat;
   z-index: 20;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoTxt {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo .CamCoTxt {
   position: absolute;
   text-align: left;
-  color: #fff;
-  text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.7);
+  color: #575757;
+  font-weight: 600;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1em;
-  left: calc(100% + 10px);
-  width: 300px;
+  right: calc(100% + 1em);
   transition: all 0.5s;
-  overflow: hidden;
   white-space: nowrap;
   vertical-align: top;
   font-family: "Noto Sans KR Regular", "NanumGothic", "나눔고딕", sans-serif;
   opacity: 1;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCoTxt.two {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo .CamCoTxt.two {
   word-break: break-all;
   transition: all 0.5s;
   opacity: 0;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.one {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.one {
   opacity: 0;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two {
   opacity: 1;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .click_flicker {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo .click_flicker {
   color: #ffd54f;
   font-weight: 600;
   /* animation: ClickFlicker 1s alternate infinite; */
@@ -155,24 +272,10 @@
     color: #fff;
   }
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCo_video {
-  position: absolute;
-  bottom: 20px;
-  left: calc(100% + 10px);
-  width: 0px;
-  height: auto;
-  transition: all 0.3s;
-}
-.Main .mainVisual .aboutCamcoWrap .about_CamCo.on .CamCo_video {
-  background-color: #000;
-  transition: all 0.3s;
-  width: 500px;
-  height: auto;
-}
-.Main .mainVisual .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo:hover .CamCoTxt.two {
   opacity: 1;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .click_flicker {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo .click_flicker {
   color: #ffd54f;
   font-weight: 600;
   /* animation: ClickFlicker 1s alternate infinite; */
@@ -185,38 +288,68 @@
     color: #fff;
   }
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo .CamCo_video {
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo .CamCo_video {
   position: absolute;
   bottom: 20px;
-  left: calc(100% + 10px);
+  right: calc(100% + 10px);
   width: 0px;
   height: auto;
   transition: all 0.3s;
 }
-.Main .mainVisual .aboutCamcoWrap .about_CamCo.on .CamCo_video {
+@media (max-width: 767px) {
+  .Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo .CamCo_video {
+    bottom: calc(100% + 1em);
+    right: calc(100% - 3em);
+  }
+}
+.Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo.on .CamCo_video {
   background-color: #000;
   transition: all 0.3s;
   width: 500px;
   height: auto;
 }
+@media (max-width: 767px) {
+  .Main .mainVisual .mvBoxWrap .mvBox .aboutCamcoWrap .about_CamCo.on .CamCo_video {
+    width: 300px;
+  }
+}
 .Main .VideoSlide .maintab {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 @media (max-width: 767px) {
   .Main .VideoSlide .maintab {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
-.Main .VideoSlide .maintab .select {
+.Main .VideoSlide .maintab .titleArea {
+  margin-right: 1.5em;
+}
+.Main .VideoSlide .maintab .titleArea .title {
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+.Main .VideoSlide .maintab .titleArea .title .normal {
+  font-weight: 400;
+}
+.Main .VideoSlide .maintab .titleArea .subTitle {
+  font-weight: 500;
+  font-size: 0.8em;
+}
+.Main .VideoSlide .maintab .tabArea .select {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 1em;
 }
-.Main .VideoSlide .maintab .select .onePoint {
+@media (max-width: 767px) {
+  .Main .VideoSlide .maintab .tabArea .select {
+    margin-left: -0.5em;
+  }
+}
+.Main .VideoSlide .maintab .tabArea .select .onePoint {
   height: 2.3em;
   width: 6.5em;
   margin-right: 0.5em;
@@ -225,10 +358,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.Main .VideoSlide .maintab .select .onePoint.on {
+.Main .VideoSlide .maintab .tabArea .select .onePoint.on {
   background-image: url(../../public/images/common/onepoint_on.svg);
 }
-.Main .VideoSlide .maintab .select .chippo {
+.Main .VideoSlide .maintab .tabArea .select .chippo {
   height: 2.3em;
   width: 6.5em;
   background-image: url(../../public/images/common/chippo_off.svg);
@@ -236,19 +369,18 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.Main .VideoSlide .maintab .select .chippo.on {
+.Main .VideoSlide .maintab .tabArea .select .chippo.on {
   background-image: url(../../public/images/common/chippo_on.svg);
 }
 .Main .VideoSlide .subtab {
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 1em;
   display: none;
   flex-wrap: wrap;
 }
 @media (max-width: 767px) {
   .Main .VideoSlide .subtab {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 .Main .VideoSlide .subtab .subBtn {
@@ -257,6 +389,11 @@
   border-radius: 1em;
   font-size: 0.9em;
   font-weight: 600;
+}
+@media (max-width: 500px) {
+  .Main .VideoSlide .subtab .subBtn {
+    font-size: 0.8em;
+  }
 }
 .Main .VideoSlide .subtab.onePoint.on {
   display: inline-flex;
@@ -309,6 +446,7 @@
   height: auto;
   max-width: 500px;
   max-height: 300px;
+  border-radius: 1.5em;
 }
 .Main .VideoSlide .slideWrap .slideArea .swiper-slide a:focus {
   box-sizing: border-box !important;
@@ -326,43 +464,52 @@
   align-items: center;
   margin-bottom: 1em;
 }
-@media (max-width: 767px) {
-  .Main .CoachSlide .maintab {
-    justify-content: center;
-  }
-}
 .Main .CoachSlide .swiper-slide {
   width: auto;
 }
 .Main .CoachSlide .coachBox {
-  width: 300px;
+  width: 320px;
   height: 240px;
   display: block;
   box-sizing: border-box;
-  padding: 1em 0.5em;
-  background-color: #EEF1F8;
-  box-shadow: 0px 0.2em 0.5em rgba(0, 0, 0, 0.25);
-  margin: 0.5em 1em;
+  padding: 1.5em;
+  border-radius: 1.5em;
+  background-color: #76B804;
+  margin: 0.5em 3em 0.5em 1em;
   outline: 3px solid transparent;
   transition: outline 0.3s, transform 0.3s, box-shadow 0.3s;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
 }
 .Main .CoachSlide .coachBox:hover {
-  outline: 3px solid #76B804;
   z-index: 10;
   transform: translate(-0.3em, -0.3em);
   box-shadow: 0.3em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
 .Main .CoachSlide .coachBox:focus {
-  outline: 3px solid #76B804;
   z-index: 10;
   transform: translate(-0.3em, -0.3em);
   box-shadow: 0.3em 0.5em 0.5em rgba(0, 0, 0, 0.25);
 }
-.Main .CoachSlide .coachBox .cate {
+.Main .CoachSlide .coachBox:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: -2em;
+  width: 0;
+  height: 0;
+  border-bottom: 1em solid #76B804;
+  border-top: 1em solid transparent;
+  border-left: 2em solid #76B804;
+  border-right: 2em solid transparent;
+}
+.Main .CoachSlide .coachBox .cateArea .cate {
   white-space: nowrap;
   font-size: 0.95em;
-  padding: 0.5em 1em;
+  padding: 0 1em 0.2em;
   width: 100%;
   left: -0.5em;
   overflow: hidden;
@@ -370,149 +517,195 @@
   color: #fff;
   z-index: 0;
 }
-.Main .CoachSlide .coachBox .cate:before {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  top: 0;
-  left: -30%;
-  width: 100%;
-  height: 100%;
-  transform: skewX(-45deg);
-  background-color: #76B804;
-}
-.Main .CoachSlide .coachBox .cate h2 {
+.Main .CoachSlide .coachBox .cateArea .cate h2 {
+  color: #fff;
   font-weight: 500;
 }
-.Main .CoachSlide .coachBox .subCate {
+.Main .CoachSlide .coachBox .cateArea .subCate {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0.8em 0;
+  padding: 0.2em 0 0;
 }
-.Main .CoachSlide .coachBox .subCate h3 {
+.Main .CoachSlide .coachBox .cateArea .subCate h3 {
   font-size: 0.8em;
   font-weight: 400;
-  padding: 0.3em 0.7em;
+  padding: 0.3em 1em;
+  white-space: nowrap;
   margin-right: 0.5em;
   background-color: #fff;
   color: #76B804;
   box-sizing: border-box;
-  border: 1px solid #76B804;
+  border: 1px solid #fff;
+  border-radius: 1em;
 }
-.Main .CoachSlide .coachBox .subCate h3.new {
+.Main .CoachSlide .coachBox .cateArea .subCate h3.new {
   background-color: #76B804;
   color: #fff;
 }
-.Main .CoachSlide .coachBox .title {
+.Main .CoachSlide .coachBox .contextArea .title {
   width: 100%;
   font-size: 16px;
 }
-.Main .CoachSlide .coachBox .title h1 {
+.Main .CoachSlide .coachBox .contextArea .title h1 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
   margin: 0;
   font-size: 1em;
-  font-weight: 600;
-  color: #2d2d2d;
+  font-weight: 500;
+  color: #fff;
 }
-.Main .CoachSlide .coachBox .context {
+.Main .CoachSlide .coachBox .contextArea .context {
   padding: 1em 0;
   font-size: 0.85em;
-  color: #2d2d2d;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.5;
 }
 .Main .ServiceIntro {
   padding: 0;
+  position: relative;
+  margin-bottom: 0;
 }
-.Main .ServiceIntro .titleArea {
+.Main .ServiceIntro .bg66 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  text-align: center;
-  background-color: #003F74;
-  box-sizing: border-box;
-  padding: 2em;
-  word-break: keep-all;
+  height: 66%;
+  background: #0C9CFF;
+  z-index: -1;
 }
-.Main .ServiceIntro .titleArea .title {
-  font-size: 1.5em;
-  color: #fff;
-  margin: 0;
-  margin-bottom: 0.5em;
+@media (max-width: 767px) {
+  .Main .ServiceIntro .bg66 {
+    display: none;
+  }
 }
-.Main .ServiceIntro .titleArea .subTitle {
-  font-size: 1em;
-  color: #fff;
-  font-weight: 400;
+.Main .ServiceIntro .bg33 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 33%;
+  background: #007ACD;
+  z-index: -1;
 }
-.Main .ServiceIntro .titleArea .subTitle strong {
-  font-weight: 600;
-  display: inline-block;
+@media (max-width: 767px) {
+  .Main .ServiceIntro .bg33 {
+    display: none;
+  }
 }
 .Main .ServiceIntro .cardArea {
-  padding: 4em 0 2em;
+  padding: 4em 0 1.5em;
 }
 .Main .ServiceIntro .cardArea .cardWrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 3em;
+  padding-bottom: 1.5em;
 }
 .Main .ServiceIntro .cardArea .cardWrap .card {
   width: 12em;
-  margin-right: 1.5em;
-  background-color: #EEF1F8;
-  box-shadow: 0.15em 0.15em 0.4em rgba(0, 0, 0, 0.25);
+  margin-right: 3em;
   border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .Main .ServiceIntro .cardArea .cardWrap .card:last-child {
   margin-right: 0;
 }
 .Main .ServiceIntro .cardArea .cardWrap .card .imgWrap {
+  width: 13em;
+  height: 13em;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3em 0;
   background-color: #fff;
+  box-shadow: 3px -5px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.Main .ServiceIntro .cardArea .cardWrap .card .imgWrap img {
+  width: 100%;
+  height: auto;
 }
 .Main .ServiceIntro .cardArea .cardWrap .card .textWrap {
   font-size: 0.85em;
   text-align: center;
   box-sizing: border-box;
-  padding: 2em 0.5em;
+  padding: 1.2em 0.5em;
   word-break: keep-all;
+  color: #fff;
+  font-size: 1em;
 }
 .Main .ServiceIntro .cardArea .cardWrap .card .textWrap strong {
   font-weight: 600;
-  color: #003F74;
 }
 @media (max-width: 767px) {
   .Main .ServiceIntro .cardArea .cardWrap {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .Main .ServiceIntro .cardArea .cardWrap .card {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    width: 80%;
-    margin-right: 0;
-    margin-bottom: 1em;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em 0;
+    border-radius: 0;
   }
   .Main .ServiceIntro .cardArea .cardWrap .card .imgWrap {
-    padding: 1em;
+    width: 8em;
+    height: 8em;
+    flex-shrink: 0;
   }
   .Main .ServiceIntro .cardArea .cardWrap .card .imgWrap img {
-    width: 2.5em;
+    width: 100%;
     height: auto;
   }
   .Main .ServiceIntro .cardArea .cardWrap .card .textWrap {
-    width: 100%;
-    font-size: 0.85em;
+    width: 50%;
+    font-size: 1em;
     text-align: center;
     box-sizing: border-box;
-    padding: 0.5em 0.5em;
+    padding: 0.5em 0.5em 0.5em 1em;
     word-break: keep-all;
+  }
+  .Main .ServiceIntro .cardArea .cardWrap .card:nth-child(1) {
+    background: #0C9CFF;
+  }
+  .Main .ServiceIntro .cardArea .cardWrap .card:nth-child(2) {
+    background-color: #007ACD;
+  }
+  .Main .ServiceIntro .cardArea .cardWrap .card:nth-child(3) {
+    background: #0C9CFF;
+  }
+}
+@media (max-width: 767px) and (max-width: 500px) {
+  .Main .ServiceIntro .cardArea .cardWrap .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 1.5em 0;
+    border-radius: 0;
+  }
+  .Main .ServiceIntro .cardArea .cardWrap .card .imgWrap {
+    width: 5em;
+    height: 5em;
+  }
+  .Main .ServiceIntro .cardArea .cardWrap .card .textWrap {
+    width: 60%;
+    font-size: 0.9em;
   }
 }
 .Main .ServiceIntro .cardArea .btnArea {
@@ -529,6 +722,7 @@
   width: 12em;
   font-size: 0.9em;
   padding: 0.7em;
+  border-radius: 2em;
   background-color: #003F74;
 }
 .Main .Footer {

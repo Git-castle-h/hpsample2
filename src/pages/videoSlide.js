@@ -16,34 +16,41 @@ function VideoSlide(){
     return(
         <section className="VideoSlide" id ="VideoSlide">
             <div className="maintab">
+                <div className="titleArea">
                 <h1 className='title'>
-                    취업 교육 동영상
+                    취업 교육&nbsp;
+                    <span className='normal'>동영상</span>
                 </h1>
-                <div className="select" onClick={selectClick}>
+                <h2 className='subTitle'>짧은 동영상으로 쉽게 알아가는 취업정보</h2>
+                </div>
+
+            <div className="tabArea">
+            <div className="select" onClick={selectClick}>
                     <button className="onePoint on"></button>
                     <button className="chippo"></button>
+            </div>
+                <div className="subtab onePoint on" onClick={tabClick}>
+                    <button className='subBtn on' data-id="prepare">취업준비</button>
+                    <button className='subBtn' data-id="resume">서류전형</button>
+                    <button className='subBtn' data-id="test">필기시험</button>
+                    <button className='subBtn' data-id="interview">면접전형</button>
+                </div>
+                <div className="subtab chippo" tabIndex={-1}  onClick={tabClick}>
+                    <button className='subBtn on' data-id="public">공기업</button>
+                    <button className='subBtn' data-id="major">대기업</button>
+                    <button className='subBtn' data-id="middle">중견기업</button>
+                    <button className='subBtn' data-id="small">강소기업</button>
+                    <button className='subBtn' data-id="finance">금융권</button>
+                    <button className='subBtn' data-id="global">글로벌기업</button>
+                    <button className='subBtn' data-id="startup">스타트업</button>
                 </div>
             </div>
-            <div className="subtab onePoint on" onClick={tabClick}>
-                <button className='subBtn on' data-id="prepare">취업준비</button>
-                <button className='subBtn' data-id="resume">서류전형</button>
-                <button className='subBtn' data-id="test">필기시험</button>
-                <button className='subBtn' data-id="interview">면접전형</button>
-            </div>
-            <div className="subtab chippo" tabIndex={-1}  onClick={tabClick}>
-                <button className='subBtn on' data-id="public">공기업</button>
-                <button className='subBtn' data-id="major">대기업</button>
-                <button className='subBtn' data-id="middle">중견기업</button>
-                <button className='subBtn' data-id="small">강소기업</button>
-                <button className='subBtn' data-id="finance">금융권</button>
-                <button className='subBtn' data-id="global">글로벌기업</button>
-                <button className='subBtn' data-id="startup">스타트업</button>
             </div>
             <div className="slideWrap">
                 <div className="slideArea pc" >
                 <Swiper
                     slidesPerView={'auto'}
-                    spaceBetween={0}
+                    spaceBetween={20}
                     modules={[ Navigation, Pagination, Scrollbar, A11y]}
                     // pagination={{clickable:true}}
                     className="mySwiper"

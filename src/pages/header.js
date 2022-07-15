@@ -7,14 +7,10 @@ function Header(){
             <header className="topHeader">
                 <div className="logoWrap">
                     <a href="/" className="">
-                        <img src={`${process.env.PUBLIC_URL}/images/common/main_logo.png`} alt="학교로고" />
+                        <img src={`${process.env.PUBLIC_URL}/images/common/main_logo_black.png`} alt="학교로고" />
                     </a>
                 </div>
-                <div className="hamburgerWrap">
-                    <div onClick={menuClick} className="center">
-                        <div className=""></div>
-                    </div>
-                </div>
+
             </header>
             <div className="subHeader" onMouseEnter={subMenuDown} onMouseLeave={subMenuLeave}>
                 <div className="leftMenuWrap">
@@ -28,11 +24,17 @@ function Header(){
                     </ul>
                 </div>
             </div>
+            <div className="hamburgerWrap">
+                    <button onClick={menuClick} className="center">
+                        <div className=""></div>
+                    </button>
+                </div>
         </div>
     )
 }
 
 function menuClick(evt){
+    console.log('clicked');
     let hamburger = document.querySelector('.hamburgerWrap .center');
     let subMenu = document.querySelector('.subHeader');
     if(hamburger.classList.contains('on')){

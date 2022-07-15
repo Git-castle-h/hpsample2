@@ -4,16 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 function ServiceIntroduce(){
     return(
         <section className='ServiceIntro' id='ServiceIntro'>
+            <div className="bg66"></div>
+            <div className="bg33"></div>
             <h1 className="screen_out">온라인 취업코칭에 대한 설명입니다.</h1>
-            <div className="titleArea">
-                <h1 className='title'>온라인 취업코칭</h1>
-                <p className='subTitle'> 이제는 취업·진로에 대한 상담과 전략은 <strong>전문가에게 맡기세요!</strong></p>
-            </div>
             <div className="cardArea">
                 <div className="cardWrap">
                     <div className="card">
                         <div className="imgWrap">
-                            <img src={process.env.PUBLIC_URL+'/images/common/ico_tip_paper.svg'} alt="" />
+                            <img src={process.env.PUBLIC_URL+'/images/main/service_online.png'} alt="" />
                         </div>
                         <div className="textWrap">
                             <p className='text'>
@@ -23,7 +21,7 @@ function ServiceIntroduce(){
                     </div>
                     <div className="card">
                         <div className="imgWrap">
-                        <img src={process.env.PUBLIC_URL+'/images/common/ico_tip_phone.svg'} alt="" />
+                        <img src={process.env.PUBLIC_URL+'/images/main/service_talyored.png'} alt="" />
                         </div>
                         <div className="textWrap">
                             <p className='text'>
@@ -32,7 +30,7 @@ function ServiceIntroduce(){
                         </div>
                     </div><div className="card">
                         <div className="imgWrap">
-                        <img src={process.env.PUBLIC_URL+'/images/common/ico_tip_pointer.svg'} alt="" />
+                        <img src={process.env.PUBLIC_URL+'/images/main/service_mobile.png'} alt="" />
                         </div>
                         <div className="textWrap">
                             <p className='text'>
