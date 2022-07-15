@@ -21,9 +21,11 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path ='/hpsample2'>
-          <Route path ='' element={<MainPage></MainPage>}></Route>
+          <Route path ='' element={<MainPage></MainPage>}>
           <Route path ='subpage' element={<SubPage></SubPage>}></Route>
           <Route path ='login' element={<LoginPage></LoginPage>}></Route>
+          </Route>
+
         </Route>
       </Routes>
       </BrowserRouter>
