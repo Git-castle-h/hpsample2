@@ -68,20 +68,20 @@
   font-size: 0.85em;
   white-space: nowrap;
 }
-.header .subHeader ul li a {
+.header .subHeader ul li button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.header .subHeader ul li a img {
+.header .subHeader ul li button img {
   display: none;
 }
-.header .subHeader ul li a span {
+.header .subHeader ul li button span {
   color: #2d2d2d;
   transition: opacity 0.3s;
   position: relative;
 }
-.header .subHeader.on ul li a:hover span {
+.header .subHeader.on ul li button:hover span {
   color: #0058A3;
 }
 .header .subHeader:focus {
