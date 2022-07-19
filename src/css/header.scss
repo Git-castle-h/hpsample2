@@ -13,6 +13,21 @@
         @include mobile{
             justify-content: space-between;
         }
+
+        .inWrap{
+            width:100%;
+            max-width: 1600px;  
+            margin: 0 auto; 
+            display: inline-flex; 
+            justify-content: flex-end; 
+            align-items: center;
+            @include mobile{
+                justify-content: space-between;
+            }
+        }
+
+
+
         .topHeader{
             pointer-events: auto;
             top:-50px;
@@ -63,7 +78,7 @@
                         align-items: center;
                         img{display: none;}
                         span{
-                            color:#2d2d2d;
+                            color:#959595;
                             transition: opacity 0.3s;
                             position: relative;
                             // ======== hover시 밑줄 효과 =======
@@ -137,7 +152,7 @@
                   .center:before,
                   .center:after,
                   .center div {
-                    background: #2d2d2d;
+                    background: #959595;
                     content: "";
                     display: block;
                     height: 2px;
@@ -185,6 +200,13 @@
                     &:last-child{
                         padding-bottom: 1em;
                     }
+
+                    button{
+                        img{
+                            display: block;
+                            margin-right: 0.3em;
+                        }
+                    }
                         a{
                             span{
                                 opacity: 1;
@@ -218,5 +240,6 @@
         .topHeader{
         }
         .subHeader{
+            border-bottom: 1px solid rgb(216, 216, 216);
         }
     }

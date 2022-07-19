@@ -15,19 +15,21 @@ function VideoSlide(){
     },[])
     return(
         <section className="VideoSlide" id ="VideoSlide">
-            <div className="maintab">
-                <div className="titleArea">
-                <h1 className='title'>
-                    취업 교육&nbsp;
-                    <span className='normal'>동영상</span>
-                </h1>
-                <h2 className='subTitle'>짧은 동영상으로 쉽게 알아가는 취업정보</h2>
-                </div>
+            <div className="inWrap">
+                <div className="maintab">
+                    <div className="titleArea">
+                    <h1 className='title'>
+                        취업 교육&nbsp;
+                        <span className='normal'>동영상</span>
+                    </h1>
+                    <h2 className='subTitle'>짧은 동영상으로 쉽게 알아가는 취업정보</h2>
+                    </div>
 
-            <div className="tabArea">
-            <div className="select" onClick={selectClick}>
-                    <button className="onePoint on"></button>
-                    <button className="chippo"></button>
+                <div className="tabArea">
+                <div className="select" onClick={selectClick}>
+                        <button className="onePoint on"></button>
+                        <button className="chippo"></button>
+                </div>
             </div>
                 <div className="subtab onePoint on" onClick={tabClick}>
                     <button className='subBtn on' data-id="prepare">취업준비</button>

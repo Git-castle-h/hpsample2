@@ -20,13 +20,15 @@ function CoachSlide(){
     return(
         <section className="CoachSlide" id ="CoachSlide">
             <h1 className="screen_out">취업코칭 사례 모음 슬라이드입니다.</h1>
-            <div className="maintab">
-            <div className="titleArea">
-                <h1 className='title'>
-                    취업 코칭&nbsp;
-                    <span className='normal'>사례</span>
-                </h1>
-                <h2 className='subTitle'>1:1 맞춤 취업코칭 진행사례로 알아보는 <strong>성공 노하우</strong></h2>
+            <div className="inWrap">
+                <div className="maintab">
+                <div className="titleArea">
+                    <h1 className='title'>
+                        취업 코칭&nbsp;
+                        <span className='normal'>사례</span>
+                    </h1>
+                    <h2 className='subTitle'>1:1 맞춤 취업코칭 진행사례로 알아보는 <strong>성공 노하우</strong></h2>
+                    </div>
                 </div>
             </div>
             <div className="slideWrap">

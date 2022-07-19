@@ -282,3 +282,5 @@ common
 .border_rn{border-right:none !important;}
 .border_ln{border-left:none !important;}
 .border_tn{border-top:none !important;}
+
+.inWrap{width:100%; max-width: 1200px; margin:0 auto;}

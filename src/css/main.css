@@ -12,7 +12,6 @@
 }
 
 .Main {
-  float: right;
   width: 100vw;
   padding-top: 50px;
   text-align: left;
@@ -724,39 +723,4 @@
   padding: 0.7em;
   border-radius: 2em;
   background-color: #003F74;
-}
-.Main .Footer {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  padding: 2em 0;
-  background-color: #06223A;
-}
-.Main .Footer p {
-  line-height: 1.7;
-  color: #6A7A89;
-  font-weight: 200;
-  font-size: 0.9em;
-}
-.Main .Footer p span {
-  position: relative;
-  margin: 0.8em;
-  opacity: 0.4;
-}
-.Main .Footer p span:after {
-  position: absolute;
-  width: 1px;
-  height: 50%;
-  content: "";
-  background-color: #fff;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 0;
-}
-.Main .Footer p a {
-  color: #6A7A89;
-  transition: color 0.2s;
-}
-.Main .Footer p a:hover {
-  color: #fff;
 }/*# sourceMappingURL=main.css.map */

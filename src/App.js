@@ -3,6 +3,7 @@ import {Header} from './pages/header.js';
 import {Main, main} from './pages/main.js';
 import {Login} from './pages/login.js';
 import {Skip} from './pages/skip.js';
+import {Footer} from './pages/footer.js';
 import { Sub } from './pages/subpage';
 import { Link } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -13,6 +14,7 @@ import './css/header.css';
 import './css/main.css';
 import './css/sub.css';
 import './css/login.css';
+import './css/footer.css';
 
 
 function App() {
@@ -36,6 +38,7 @@ function MainPage(){
     <Header></Header>
     <Skip></Skip>
     <Main></Main>
+    <Footer></Footer>
     </div>
   )
 }
@@ -47,6 +50,7 @@ function  SubPage(){
     <div className="MainPage">
     <Header></Header>
     <Sub></Sub>
+    <Footer></Footer>
     </div>
   )
 }

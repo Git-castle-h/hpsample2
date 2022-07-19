@@ -3,7 +3,6 @@ import {Mainvisual} from './mainvisual';
 import{VideoSlide} from './videoSlide';
 import{CoachSlide} from './coachSlide';
 import{ServiceIntroduce} from './serviceIntroduce.js';
-import{Footer} from './footer.js';
 
 function Main(){
     return(
@@ -12,7 +11,6 @@ function Main(){
             <VideoSlide></VideoSlide>
             <CoachSlide></CoachSlide>
             <ServiceIntroduce></ServiceIntroduce>
-            <Footer></Footer>
         </div>
     )
 }
